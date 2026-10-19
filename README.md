@@ -38,7 +38,7 @@ Engångsinställning:
    - `LOOPIA_FTP_DIR` (bara om sajten ska ligga någon annanstans än `/dittevent.nu/public_html/`)
 3. Gå till fliken *Actions → Publicera till Loopia → Run workflow* för att ladda upp första gången.
 
-`.htaccess` komprimerar filerna och ställer in cache. HTTPS slås på med "Tvinga SSL" under domänens inställningar i Loopia Kundzon (när SSL-certifikatet är aktivt).
+HTTPS slås på med "Tvinga SSL" under domänens inställningar i Loopia Kundzon (när SSL-certifikatet är aktivt).
 
 ## Kontaktformuläret
 
