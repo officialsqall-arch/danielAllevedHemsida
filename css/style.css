@@ -210,20 +210,22 @@ a:hover { color: var(--color-brick); }
   color: var(--color-gold-hover);
 }
 .hero__name {
-  font-family: var(--font-script);
-  font-weight: 400;
+  font-family: var(--font-hero);
+  font-weight: 600;
+  text-transform: uppercase;
   font-size: var(--fs-hero-name);
+  letter-spacing: 0.05em;
   line-height: 1.05;
   margin: 0 auto;
 }
 .hero__title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: var(--font-script);
+  font-weight: 400;
   font-size: var(--fs-hero-title);
-  letter-spacing: 0.02em;
-  line-height: 1.05;
-  margin: 2px auto 22px;
+  line-height: 1.2;
+  margin: 0 auto 18px;
+  /* Skrivstilens slingor sticker ut; utrymme så att de inte klipps av bakgrundsklippningen */
+  padding: 0 0.2em 0.1em;
 }
 .ornament {
   display: flex;
@@ -785,8 +787,8 @@ fieldset.choices { border: none; margin: 0; padding: 0; }
   .hero__overlay { background: linear-gradient(0deg, rgba(8, 26, 29, 0.96) 18%, rgba(8, 26, 29, 0.55) 58%, rgba(8, 26, 29, 0.2) 100%); }
   .hero__temp { top: 16px; font-size: 10px; padding: 6px 12px; }
   .hero__content { padding: 0 22px 40px; }
-  .hero__name { font-size: 64px; }
-  .hero__title { font-size: 25px; line-height: 1.1; margin: 4px 0 18px; }
+  .hero__name { font-size: 9vw; letter-spacing: 0.04em; }
+  .hero__title { font-size: 8.4vw; margin: 0 0 16px; }
   .ornament { max-width: 300px; gap: 14px; }
   .hero__services {
     display: grid;
