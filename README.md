@@ -1,4 +1,4 @@
-# dittevent.nu – Daniel Alleved
+# danielalleved.se
 
 One-page-sajt för Daniel Alleved, nöjesvärd och konferencier. Byggd från den godkända designen i [`design-handoff/`](design-handoff/) (desktop ≥ 821 px, mobil ≤ 820 px).
 
@@ -31,11 +31,11 @@ Sajten laddas upp automatiskt till Loopia-webbhotellet via FTP varje gång någo
 
 Engångsinställning:
 
-1. **Loopia Kundzon:** se till att dittevent.nu är kopplad till webbhotellet och slå på SSL-certifikat (gratis Let's Encrypt). Ta fram FTP-användarnamn och lösenord (under FTP-konton eller webbhotellets inställningar).
+1. **Loopia Kundzon:** se till att danielalleved.se är kopplad till webbhotellet och slå på SSL-certifikat (gratis Let's Encrypt). Ta fram FTP-användarnamn och lösenord (under FTP-konton eller webbhotellets inställningar).
 2. **GitHub:** gå till *Settings → Secrets and variables → Actions → New repository secret* och lägg till
    - `LOOPIA_FTP_USER`: FTP-användarnamnet
    - `LOOPIA_FTP_PASSWORD`: FTP-lösenordet
-   - `LOOPIA_FTP_DIR` (bara om sajten ska ligga någon annanstans än `/dittevent.nu/public_html/`)
+   - `LOOPIA_FTP_DIR` (bara om sajten ska ligga någon annanstans än `/danielalleved.se/public_html/`)
 3. Gå till fliken *Actions → Publicera till Loopia → Run workflow* för att ladda upp första gången.
 
 HTTPS slås på med "Tvinga SSL" under domänens inställningar i Loopia Kundzon (när SSL-certifikatet är aktivt).
