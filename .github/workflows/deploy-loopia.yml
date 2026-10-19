@@ -2,7 +2,7 @@
 # Kräver tre "repository secrets" i GitHub (Settings → Secrets and variables → Actions):
 #   LOOPIA_FTP_USER      FTP-användarnamnet från Loopia Kundzon
 #   LOOPIA_FTP_PASSWORD  FTP-lösenordet
-#   LOOPIA_FTP_DIR       (valfri) mappen på servern, standard: /danielalleved.se/public_html/
+#   LOOPIA_FTP_DIR       (valfri) mappen på servern, standard: /dittevent.nu/public_html/
 name: Publicera till Loopia
 
 on:
@@ -35,7 +35,7 @@ jobs:
           protocol: ftps
           username: ${{ secrets.LOOPIA_FTP_USER }}
           password: ${{ secrets.LOOPIA_FTP_PASSWORD }}
-          server-dir: ${{ secrets.LOOPIA_FTP_DIR || '/danielalleved.se/public_html/' }}
+          server-dir: ${{ secrets.LOOPIA_FTP_DIR || '/dittevent.nu/public_html/' }}
           # Bara själva sajten laddas upp, inte designfiler, skript och dokumentation
           exclude: |
             **/.git*

@@ -1,10 +1,10 @@
 # Apache-inställningar för Loopia
 
-# Skicka alla till https://danielalleved.se (utan www)
+# Skicka alla till https://dittevent.nu (utan www)
 RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ https://danielalleved.se%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://dittevent.nu%{REQUEST_URI} [L,R=301]
 
 # Rätt filtyper
 AddType image/webp .webp
