@@ -13,7 +13,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 # filnamn -> (bredder, kvalitet)
 JOBS = {
     "hero-temp.jpg": ([1000, 1920], 72),
-    "mingel-oktoberfest.jpg": ([600, 1000], 75),
+    "mingel-skal.jpg": ([600, 1000], 76),
     "middag.jpg": ([600, 1000], 75),
     "musicquiz.jpg": ([600, 1000], 75),
     "kvall.jpg": ([600, 1000], 75),
