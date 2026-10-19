@@ -1,0 +1,46 @@
+# Laddar upp sajten till Loopia via FTP varje gång något ändras på main.
+# Kräver tre "repository secrets" i GitHub (Settings → Secrets and variables → Actions):
+#   LOOPIA_FTP_USER      FTP-användarnamnet från Loopia Kundzon
+#   LOOPIA_FTP_PASSWORD  FTP-lösenordet
+#   LOOPIA_FTP_DIR       (valfri) mappen på servern, standard: /danielalleved.se/public_html/
+name: Publicera till Loopia
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-loopia
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      FTP_USER: ${{ secrets.LOOPIA_FTP_USER }}
+    steps:
+      - name: Hoppa över om FTP-uppgifter saknas
+        if: env.FTP_USER == ''
+        run: echo "::notice::LOOPIA_FTP_USER är inte satt än, ingen uppladdning gjordes."
+
+      - uses: actions/checkout@v4
+        if: env.FTP_USER != ''
+
+      - name: Ladda upp till Loopia
+        if: env.FTP_USER != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftpcluster.loopia.se
+          protocol: ftps
+          username: ${{ secrets.LOOPIA_FTP_USER }}
+          password: ${{ secrets.LOOPIA_FTP_PASSWORD }}
+          server-dir: ${{ secrets.LOOPIA_FTP_DIR || '/danielalleved.se/public_html/' }}
+          # Bara själva sajten laddas upp, inte designfiler, skript och dokumentation
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            design-handoff/**
+            scripts/**
+            README.md

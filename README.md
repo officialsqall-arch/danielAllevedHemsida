@@ -25,12 +25,20 @@ python3 -m http.server 8000
 # gå till http://localhost:8000
 ```
 
-## Publicera med GitHub Pages
+## Publicera på Loopia
 
-1. På GitHub: **Settings → Pages**.
-2. Under *Build and deployment* väljer du **Deploy from a branch**, branch `main` och mapp `/ (root)`.
-3. Efter någon minut ligger sajten på `https://<ditt-användarnamn>.github.io/<repo-namn>/`.
-4. För egen domän (danielalleved.se): fyll i domänen under *Custom domain* och peka DNS hos domänleverantören enligt GitHubs instruktioner.
+Sajten laddas upp automatiskt till Loopia-webbhotellet via FTP varje gång något ändras på `main` (se `.github/workflows/deploy-loopia.yml`). Bara själva sajten skickas upp; `design-handoff/`, `scripts/` och README stannar på GitHub.
+
+Engångsinställning:
+
+1. **Loopia Kundzon:** se till att danielalleved.se är kopplad till webbhotellet och slå på SSL-certifikat (gratis Let's Encrypt). Ta fram FTP-användarnamn och lösenord (under FTP-konton eller webbhotellets inställningar).
+2. **GitHub:** gå till *Settings → Secrets and variables → Actions → New repository secret* och lägg till
+   - `LOOPIA_FTP_USER`: FTP-användarnamnet
+   - `LOOPIA_FTP_PASSWORD`: FTP-lösenordet
+   - `LOOPIA_FTP_DIR` (bara om sajten ska ligga någon annanstans än `/danielalleved.se/public_html/`)
+3. Gå till fliken *Actions → Publicera till Loopia → Run workflow* för att ladda upp första gången.
+
+`.htaccess` skickar alla besökare till `https://danielalleved.se`, komprimerar filerna och ställer in cache.
 
 ## Kontaktformuläret
 
