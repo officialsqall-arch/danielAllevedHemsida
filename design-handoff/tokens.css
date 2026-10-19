@@ -1,0 +1,58 @@
+/* Daniel Alleved: design tokens (från designfilerna) */
+/* Typsnitt (Google Fonts):
+   https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Work+Sans:wght@400;500;600;700&display=swap */
+
+:root {
+  /* Ytor */
+  --color-ivory: #FAF7F0;        /* sidbakgrund, ljusa sektioner */
+  --color-sand: #EFE9DC;         /* referensbakgrund (under bild) */
+  --color-mint: #DDEDE7;         /* checkbox-chips i formuläret */
+  --color-navy: #0B2B33;         /* mörka sektioner, mobil-footer */
+  --color-navy-deep: #081A1D;    /* hero-overlay (rgba 0.32–0.96) */
+  --color-teal-panel: rgba(10, 44, 50, 0.8); /* "Om Daniel" */
+
+  /* Text */
+  --color-ink: #16262A;          /* brödtext på ljust */
+  --color-ink-2: #2E4447;
+  --color-muted: #5B6A6A;        /* sekundär text (mobil: #4A5A5B för bättre kontrast) */
+  --color-on-dark: #F3EDE1;
+  --color-on-dark-muted: #DCD3C2;
+  --color-on-teal: #DCE9E5;
+
+  /* Accenter */
+  --color-gold: #D9B36A;         /* primär CTA, tidslinjeprickar */
+  --color-gold-hover: #E8C88C;
+  --color-gold-light: #EBD7A8;   /* etiketter på mörkt */
+  --color-gold-line: #C9A44F;
+  --color-teal: #17696E;         /* länkar, sekundära knappar, submit */
+  --color-teal-hover: #0F5257;
+  --color-brick: #A8402F;        /* eyebrow-etiketter, rubrikaccent, hover */
+
+  /* Guldgradient på hero-rubrikerna (background-clip: text) */
+  --gradient-gold-text: linear-gradient(180deg, #F7E7B8 0%, #D9B36A 45%, #A97F30 75%, #F2DCA6 100%);
+
+  /* Linjer */
+  --line-light: rgba(22, 38, 42, 0.16);
+  --line-dark: rgba(243, 237, 225, 0.22);
+
+  /* Typsnitt */
+  --font-script: 'Pinyon Script', cursive;           /* endast namnet i hero */
+  --font-display: 'Playfair Display', Georgia, serif; /* rubriker, citat, tider */
+  --font-body: 'Work Sans', system-ui, sans-serif;    /* brödtext, UI */
+
+  /* Typskala: desktop / mobil */
+  --fs-hero-name: clamp(54px, 8vw, 96px);   /* mobil 64px */
+  --fs-hero-title: clamp(28px, 4.4vw, 54px); /* mobil 25px, versaler, 700 */
+  --fs-h2: 38px;                              /* mobil 30–32px */
+  --fs-h3: 28px;                              /* mobil 25px */
+  --fs-body: 17px;                            /* mobil 16px */
+  --fs-eyebrow: 12.5px;                       /* versaler, 700, spärrning 0.2em */
+
+  /* Layout */
+  --container: 1140px;
+  --gutter: 32px;          /* mobil 22px */
+  --section-y: 100px;      /* mobil 56–64px */
+  --radius: 3px;
+  --tap-min: 44px;         /* mobil: knappar 50–54px höga */
+  --breakpoint: 820px;
+}
