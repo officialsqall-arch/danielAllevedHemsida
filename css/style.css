@@ -970,7 +970,6 @@ fieldset.choices { border: none; margin: 0; padding: 0; }
     gap: 0;
     font-size: 15px;
   }
-  .choices--extra .choice { background: #fff; }
   .choice label { flex: 1; gap: 12px; min-height: 50px; white-space: normal; }
   .choice input { width: 20px; height: 20px; }
   .info-btn {

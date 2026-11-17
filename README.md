@@ -54,7 +54,6 @@ För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspr
 
 - [ ] **Hero-video** (valfritt): byt bilden mot en video (instruktion finns som kommentar i `index.html`).
 - [ ] **Referenscitat**: alla kort säger "[Klistra in en längre skriftlig referens här.]".
-- [ ] **Tilläggstexter** för eldshow, extra liveband, styltgång och eld-mingel (`INFO` i `js/main.js`).
 - [ ] **Kundlogotyper**: nu bara text.
 - [ ] Kontrollera att `@danielalleved` på Instagram och `kontakt@danielalleved.se` stämmer.
 
