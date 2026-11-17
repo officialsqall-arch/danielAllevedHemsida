@@ -207,13 +207,15 @@ a:hover { color: var(--color-brick); }
   margin: 0 auto;
 }
 .hero__title {
-  font-family: var(--font-script);
-  font-weight: 400;
+  font-family: var(--font-caps);
+  font-weight: 500;
+  text-transform: uppercase;
   font-size: var(--fs-hero-title);
-  line-height: 1.2;
-  margin: 0 auto 18px;
-  /* Skrivstilens slingor sticker ut; utrymme så att de inte klipps av bakgrundsklippningen */
-  padding: 0 0.2em 0.1em;
+  letter-spacing: 0.32em;
+  line-height: 1.4;
+  margin: 10px auto 24px;
+  /* Spärrningen lägger luft efter sista bokstaven; lika mycket till vänster håller texten centrerad */
+  padding-left: 0.32em;
 }
 .ornament {
   display: flex;
@@ -774,8 +776,9 @@ fieldset.choices { border: none; margin: 0; padding: 0; }
   .hero__media { object-position: 50% 30%; }
   .hero__overlay { background: linear-gradient(0deg, rgba(8, 26, 29, 0.96) 18%, rgba(8, 26, 29, 0.55) 58%, rgba(8, 26, 29, 0.2) 100%); }
   .hero__content { padding: 0 22px 40px; }
-  .hero__name { font-size: 9vw; letter-spacing: 0.04em; }
-  .hero__title { font-size: 8.4vw; margin: 0 0 16px; }
+  /* Skalar med ytan innanför marginalerna så att namnet håller sig på en rad även på 320 px */
+  .hero__name { font-size: calc((100vw - 2 * var(--gutter)) / 10.2); letter-spacing: 0.04em; }
+  .hero__title { font-size: max(11px, 3.4vw); letter-spacing: 0.24em; padding-left: 0.24em; margin: 6px 0 18px; }
   .ornament { max-width: 300px; gap: 14px; }
   .hero__services {
     display: grid;
