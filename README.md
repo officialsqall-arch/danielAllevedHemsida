@@ -49,7 +49,6 @@ Första gången någon skickar formuläret mejlar FormSubmit en aktiveringslänk
 ## Kvar att göra (platshållare)
 
 - [ ] **Hero-video** (valfritt): byt bilden mot en video (instruktion finns som kommentar i `index.html`).
-- [ ] **Referenscitat**: alla kort säger "[Klistra in en längre skriftlig referens här.]".
 - [ ] **Kundlogotyper**: nu bara text.
 - [ ] Kontrollera att `@danielalleved` på Instagram stämmer.
 
