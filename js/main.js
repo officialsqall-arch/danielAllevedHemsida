@@ -13,7 +13,8 @@ const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 /* Rubrikerna i mejlet som FormSubmit skickar (formulärfältets name → rubrik) */
 const MAIL_LABELS = {
   namn: 'Namn',
-  epost: 'Epost',
+  // FormSubmit sätter svarsadressen (Reply-To) bara från ett fält som heter exakt "email"
+  epost: 'email',
   telefon: 'Telefon',
   antal: 'Antal gäster',
   datum: 'Datum för eventet',
@@ -233,7 +234,6 @@ const mobileQuery = window.matchMedia('(max-width: 820px)');
         body.append(MAIL_LABELS[key] || key, data.getAll(key).join(', '));
       }
       body.set('_subject', `Offertförfrågan från ${data.get('namn')}`);
-      body.set('_replyto', data.get('epost'));
       body.set('_template', 'table');
       body.set('_captcha', 'false');
 
