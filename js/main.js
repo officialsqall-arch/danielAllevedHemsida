@@ -10,6 +10,20 @@
 const CONTACT_EMAIL = 'info@danielalleved.se';
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
+/* Rubrikerna i mejlet som FormSubmit skickar (formulärfältets name → rubrik) */
+const MAIL_LABELS = {
+  namn: 'Namn',
+  epost: 'Epost',
+  telefon: 'Telefon',
+  antal: 'Antal gäster',
+  datum: 'Datum för eventet',
+  plats: 'Plats för eventet',
+  tid_fran: 'Tid från',
+  tid_till: 'Tid till',
+  tjanster: 'Tillval',
+  ovrigt: 'Meddelande'
+};
+
 /* Texter till "?"-knapparna i formuläret */
 const INFO = {
   mingel: ['Mingel', 'Jag memorerar gästernas namn under mingelmomentet och skapar en personlig kontakt med varje gäst redan innan kvällen börjar på riktigt.'],
@@ -212,9 +226,12 @@ const mobileQuery = window.matchMedia('(max-width: 820px)');
     submit.disabled = true;
     submit.textContent = 'Skickar…';
     try {
-      // Kryssrutor med samma namn slås ihop till en kommaseparerad rad
+      // Kryssrutor med samma namn slås ihop till en kommaseparerad rad.
+      // Fälten döps om till rubrikerna som ska stå i mejlet.
       const body = new FormData();
-      for (const key of new Set(data.keys())) body.append(key, data.getAll(key).join(', '));
+      for (const key of new Set(data.keys())) {
+        body.append(MAIL_LABELS[key] || key, data.getAll(key).join(', '));
+      }
       body.set('_subject', `Offertförfrågan från ${data.get('namn')}`);
       body.set('_replyto', data.get('epost'));
       body.set('_template', 'table');
