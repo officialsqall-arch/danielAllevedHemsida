@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Bodoni+Moda:wght@600&amp;family=Cinzel:wght@500&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Bodoni+Moda:wght@600&amp;family=Cinzel:wght@500&amp;family=Marcellus&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap">
   <link rel="preload" as="image" href="assets/img/hero-temp-960.webp" fetchpriority="high">
   <!-- ?v=dev byts mot commit-id vid uppladdning till Loopia, så att besökare alltid får senaste CSS/JS -->
   <link rel="stylesheet" href="css/tokens.css?v=dev">
@@ -417,7 +417,7 @@
           <!-- Utan JavaScript skickas formuläret direkt till FormSubmit -->
           <form class="quote-form" id="offertformular" action="https://formsubmit.co/info@danielalleved.se" method="POST" novalidate>
             <!-- Fälla för spamrobotar: osynlig för besökare, FormSubmit kastar inskick där den är ifylld -->
-            <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="field">
               <label for="f-namn">Namn <span class="req" aria-hidden="true">*</span></label>
               <input id="f-namn" type="text" name="namn" autocomplete="name" required aria-describedby="f-namn-fel">

@@ -699,6 +699,21 @@ fieldset.choices { border: none; margin: 0; padding: 0; }
 .info-modal h3 { font-family: var(--font-display); font-weight: 600; font-size: 26px; margin: 8px 0 12px; }
 .info-modal p { color: var(--color-muted); font-size: 15.5px; text-wrap: pretty; }
 
+/* ---------- Löptext ----------
+   Brödtexten sätts i Marcellus; knappar, meny, formulär och versaletiketter behåller Work Sans. */
+.section-head p,
+.offer p,
+.timeline p,
+.about p,
+.logistics p,
+.contact__lead,
+.contact__compact span,
+.form-thanks p,
+.info-modal p {
+  font-family: var(--font-text);
+  font-weight: 400;
+}
+
 /* =====================================================================
    MOBIL ≤ 820 px
    ===================================================================== */
