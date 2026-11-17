@@ -207,7 +207,7 @@ a:hover { color: var(--color-brick); }
   margin: 0 auto;
 }
 .hero__title {
-  font-family: var(--font-caps);
+  font-family: var(--font-caps, 'Cinzel', Georgia, serif);
   font-weight: 500;
   text-transform: uppercase;
   font-size: var(--fs-hero-title);

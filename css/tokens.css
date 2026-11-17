@@ -43,7 +43,7 @@
 
   /* Typskala: desktop / mobil */
   --fs-hero-name: clamp(40px, 7.4vw, 92px); /* versaler; mobil 9vw */
-  --fs-hero-title: clamp(16px, 2vw, 26px);  /* spärrade versaler; mobil 3.4vw */
+  --fs-hero-title: 27px;                      /* spärrade versaler; mobil max(11px, 3.4vw) */
   --fs-h2: 38px;                              /* mobil 30–32px */
   --fs-h3: 28px;                              /* mobil 25px */
   --fs-body: 17px;                            /* mobil 16px */
