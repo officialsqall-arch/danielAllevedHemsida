@@ -52,7 +52,7 @@ För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspr
 
 ## Kvar att göra (platshållare)
 
-- [ ] **Hero-video**: byt bilden mot en video (instruktion finns som kommentar i `index.html`) och ta bort etiketten "Temporär bild".
+- [ ] **Hero-video** (valfritt): byt bilden mot en video (instruktion finns som kommentar i `index.html`).
 - [ ] **Referenscitat**: alla kort säger "[Klistra in en längre skriftlig referens här.]".
 - [ ] **Telefonnummer**: `+46 70-000 00 00` är påhittat. Sök efter `46700000000` och `70-000 00 00` och byt på alla ställen (även i JSON-LD).
 - [ ] **Tilläggstexter** för eldshow, extra liveband, styltgång och eld-mingel (`INFO` i `js/main.js`).
