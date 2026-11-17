@@ -2,12 +2,13 @@
 
 /* ------------------------------------------------------------------
    INSTÄLLNINGAR
-   FORM_ENDPOINT: adressen formuläret skickas till, t.ex. en Formspree-adress
-   ("https://formspree.io/f/abcdwxyz"). Så länge den är tom öppnas besökarens
-   e-postprogram med förfrågan ifylld och adresserad till CONTACT_EMAIL.
+   Formuläret skickas via FormSubmit.co, som mejlar förfrågan till
+   CONTACT_EMAIL. Första gången skickar FormSubmit ett aktiveringsmejl till
+   adressen; klicka "Activate Form" i det, sedan kommer förfrågningarna fram.
+   Om FORM_ENDPOINT töms öppnas besökarens e-postprogram i stället.
    ------------------------------------------------------------------ */
-const FORM_ENDPOINT = '';
 const CONTACT_EMAIL = 'info@danielalleved.se';
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 /* Texter till "?"-knapparna i formuläret */
 const INFO = {
@@ -212,17 +213,22 @@ const mobileQuery = window.matchMedia('(max-width: 820px)');
     submit.textContent = 'Skickar…';
     try {
       // Kryssrutor med samma namn slås ihop till en kommaseparerad rad
-      const payload = {};
-      for (const key of new Set(data.keys())) payload[key] = data.getAll(key).join(', ');
-      payload._subject = `Offertförfrågan från ${payload.namn}`;
-      payload._replyto = payload.epost;
+      const body = new FormData();
+      for (const key of new Set(data.keys())) body.append(key, data.getAll(key).join(', '));
+      body.set('_subject', `Offertförfrågan från ${data.get('namn')}`);
+      body.set('_replyto', data.get('epost'));
+      body.set('_template', 'table');
+      body.set('_captcha', 'false');
 
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { Accept: 'application/json' },
+        body
       });
-      if (!res.ok) throw new Error(res.status);
+      const result = await res.json().catch(() => ({}));
+      // FormSubmit svarar med success "false" t.ex. innan adressen är aktiverad
+      if (!res.ok || String(result.success) !== 'true') throw new Error(result.message || res.status);
+      form.reset();
       showThanks();
     } catch (err) {
       status.innerHTML = `Något gick fel när förfrågan skulle skickas. Försök igen eller mejla direkt till <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>.`;

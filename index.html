@@ -414,7 +414,10 @@
         </div>
 
         <div class="contact__form-wrap">
-          <form class="quote-form" id="offertformular" novalidate>
+          <!-- Utan JavaScript skickas formuläret direkt till FormSubmit -->
+          <form class="quote-form" id="offertformular" action="https://formsubmit.co/info@danielalleved.se" method="POST" novalidate>
+            <!-- Fälla för spamrobotar: osynlig för besökare, FormSubmit kastar inskick där den är ifylld -->
+            <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="field">
               <label for="f-namn">Namn <span class="req" aria-hidden="true">*</span></label>
               <input id="f-namn" type="text" name="namn" autocomplete="name" required aria-describedby="f-namn-fel">

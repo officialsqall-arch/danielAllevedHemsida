@@ -42,13 +42,9 @@ HTTPS slås på med "Tvinga SSL" under domänens inställningar i Loopia Kundzon
 
 ## Kontaktformuläret
 
-I `js/main.js` finns `FORM_ENDPOINT` högst upp. Så länge den är tom öppnar formuläret besökarens e-postprogram med förfrågan ifylld till info@danielalleved.se.
+Formuläret skickas via [FormSubmit](https://formsubmit.co) till info@danielalleved.se (inställningen ligger högst upp i `js/main.js`). Inget konto behövs.
 
-För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspree](https://formspree.io):
-
-1. Skapa ett gratiskonto och ett formulär som skickar till info@danielalleved.se.
-2. Kopiera formulärets adress (ser ut som `https://formspree.io/f/abcdwxyz`).
-3. Klistra in den: `const FORM_ENDPOINT = 'https://formspree.io/f/abcdwxyz';`
+Första gången någon skickar formuläret mejlar FormSubmit en aktiveringslänk till info@danielalleved.se. Klicka på **Activate Form** i det mejlet; därefter kommer alla förfrågningar fram. Kolla skräpposten om mejlet inte syns.
 
 ## Kvar att göra (platshållare)
 
