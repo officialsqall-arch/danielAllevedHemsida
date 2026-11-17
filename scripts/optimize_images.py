@@ -15,7 +15,7 @@ JOBS = {
     "hero-temp.jpg": ([1000, 1920], 72),
     "mingel-utomhus.jpg": ([600, 1000], 76),
     "middag-bord.jpg": ([600, 1000], 76),
-    "publik-mobil.jpg": ([600, 1000], 76),
+    "dans-langdans.jpg": ([600, 1000], 76),
     "kvall.jpg": ([600, 1000], 75),
     "daniel-portratt.jpg": ([600, 1000], 78),
     "bg-gold-navy-rot.png": ([1920], 60),
