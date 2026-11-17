@@ -7,7 +7,7 @@
    e-postprogram med förfrågan ifylld och adresserad till CONTACT_EMAIL.
    ------------------------------------------------------------------ */
 const FORM_ENDPOINT = '';
-const CONTACT_EMAIL = 'kontakt@danielalleved.se';
+const CONTACT_EMAIL = 'info@danielalleved.se';
 
 /* Texter till "?"-knapparna i formuläret */
 const INFO = {

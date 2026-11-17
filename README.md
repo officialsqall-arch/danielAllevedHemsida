@@ -42,11 +42,11 @@ HTTPS slås på med "Tvinga SSL" under domänens inställningar i Loopia Kundzon
 
 ## Kontaktformuläret
 
-I `js/main.js` finns `FORM_ENDPOINT` högst upp. Så länge den är tom öppnar formuläret besökarens e-postprogram med förfrågan ifylld till kontakt@danielalleved.se.
+I `js/main.js` finns `FORM_ENDPOINT` högst upp. Så länge den är tom öppnar formuläret besökarens e-postprogram med förfrågan ifylld till info@danielalleved.se.
 
 För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspree](https://formspree.io):
 
-1. Skapa ett gratiskonto och ett formulär som skickar till kontakt@danielalleved.se.
+1. Skapa ett gratiskonto och ett formulär som skickar till info@danielalleved.se.
 2. Kopiera formulärets adress (ser ut som `https://formspree.io/f/abcdwxyz`).
 3. Klistra in den: `const FORM_ENDPOINT = 'https://formspree.io/f/abcdwxyz';`
 
@@ -55,7 +55,7 @@ För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspr
 - [ ] **Hero-video** (valfritt): byt bilden mot en video (instruktion finns som kommentar i `index.html`).
 - [ ] **Referenscitat**: alla kort säger "[Klistra in en längre skriftlig referens här.]".
 - [ ] **Kundlogotyper**: nu bara text.
-- [ ] Kontrollera att `@danielalleved` på Instagram och `kontakt@danielalleved.se` stämmer.
+- [ ] Kontrollera att `@danielalleved` på Instagram stämmer.
 
 ## SEO
 
