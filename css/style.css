@@ -201,8 +201,10 @@ a:hover { color: var(--color-brick); }
   padding: 0 var(--gutter) 64px;
   text-align: center;
 }
+.hero__heading { margin: 0; font-weight: inherit; }
 .hero__name,
 .hero__title {
+  display: block;
   background: var(--gradient-gold-text);
   -webkit-background-clip: text;
   background-clip: text;

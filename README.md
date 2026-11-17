@@ -58,3 +58,9 @@ För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspr
 - [ ] **Tilläggstexter** för eldshow, extra liveband, styltgång och eld-mingel (`INFO` i `js/main.js`).
 - [ ] **Kundlogotyper**: nu bara text.
 - [ ] Kontrollera att `@danielalleved` på Instagram och `kontakt@danielalleved.se` stämmer.
+
+## SEO
+
+- `<title>`, meta description, Open Graph och strukturerad data (JSON-LD: WebSite, Person, EntertainmentBusiness) ligger i `<head>` i `index.html`.
+- `robots.txt` och `sitemap.xml` ligger i roten. Uppdatera `<lastmod>` i sitemap när innehållet ändras mycket.
+- När telefonnumret är riktigt: lägg till `"telephone"` i JSON-LD-blocket (EntertainmentBusiness).
