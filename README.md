@@ -54,7 +54,6 @@ För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspr
 
 - [ ] **Hero-video** (valfritt): byt bilden mot en video (instruktion finns som kommentar i `index.html`).
 - [ ] **Referenscitat**: alla kort säger "[Klistra in en längre skriftlig referens här.]".
-- [ ] **Telefonnummer**: `+46 70-000 00 00` är påhittat. Sök efter `46700000000` och `70-000 00 00` och byt på alla ställen (även i JSON-LD).
 - [ ] **Tilläggstexter** för eldshow, extra liveband, styltgång och eld-mingel (`INFO` i `js/main.js`).
 - [ ] **Kundlogotyper**: nu bara text.
 - [ ] Kontrollera att `@danielalleved` på Instagram och `kontakt@danielalleved.se` stämmer.
@@ -63,4 +62,3 @@ För att få förfrågningar skickade direkt (rekommenderas), t.ex. med [Formspr
 
 - `<title>`, meta description, Open Graph och strukturerad data (JSON-LD: WebSite, Person, EntertainmentBusiness) ligger i `<head>` i `index.html`.
 - `robots.txt` och `sitemap.xml` ligger i roten. Uppdatera `<lastmod>` i sitemap när innehållet ändras mycket.
-- När telefonnumret är riktigt: lägg till `"telephone"` i JSON-LD-blocket (EntertainmentBusiness).
