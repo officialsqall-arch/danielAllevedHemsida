@@ -29,7 +29,7 @@ const MAIL_LABELS = {
 const INFO = {
   mingel: ['Mingel', 'Jag memorerar gästernas namn under mingelmomentet och skapar en personlig kontakt med varje gäst redan innan kvällen börjar på riktigt.'],
   middag: ['Middagsunderhållning', 'Medan ni äter håller jag i stämningen — bakgrundsmusik, presentationer och nöjesvärdskap. Jag går runt bland borden och pratar med gästerna genom hela middagen.'],
-  quiz: ['Music quiz', '50–100 olika moment att välja bland. Exempel: "Spännande utmaningar" — alla som sjunger med i låten får poäng. "Dansbandskampen" — alla som dansar med i kategorin poängsätts.'],
+  quiz: ['MusicQuiz', '50–100 olika moment att välja bland. Exempel: "Spännande utmaningar" — alla som sjunger med i låten får poäng. "Dansbandskampen" — alla som dansar med i kategorin poängsätts.'],
   kvall: ['Kvällsunderhållning', 'Jag bjuder in till allsång, dans och andra upptåg — och plockar fram saxofonen vid kvällens höjdpunkter.']
 };
 
