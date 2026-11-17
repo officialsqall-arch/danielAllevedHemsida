@@ -14,7 +14,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 JOBS = {
     "hero-temp.jpg": ([1000, 1920], 72),
     "mingel-utomhus.jpg": ([600, 1000], 76),
-    "daniel-scen.jpg": ([600, 1000], 76),
+    "band-scen.jpg": ([600, 1000], 78),
     "musicquiz.jpg": ([600, 1000], 75),
     "kvall.jpg": ([600, 1000], 75),
     "daniel-portratt.jpg": ([600, 1000], 78),
