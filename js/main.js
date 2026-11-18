@@ -30,7 +30,7 @@ const INFO = {
   mingel: ['Mingel', 'Under minglet hälsar jag på varje gäst och lär mig deras namn. På så sätt skapar jag en personlig kontakt med varje person redan innan middagen börjar och lägger grunden för en kväll där alla känner sig välkomna.'],
   middag: ['Middagsunderhållning', 'Under middagen ser jag till att allt flyter på. Jag håller i information och presentationer och bjuder på underhållning mellan rätterna så att kvällen får en härlig variation.'],
   quiz: ['Music Quiz', 'Gästerna tävlar lagvis i olika kategorier med spännande utmaningar. Det blir livemusik, show, saxofon, dans och allsång blandat med mycket humor. En självklar höjdpunkt som alltid blir en dundersuccé.'],
-  kvall: ['Kvällsunderhållning', 'När kvällen går mot sitt crescendo höjer vi pulsen! Dansgolvet fylls av livemusik med välkända klassiker som varvas med DJ-musik och saxofon-highlights till kvällens sista låt.']
+  kvall: ['Kvällsunderhållning', 'När kvällen går mot sitt crescendo höjer vi pulsen. Dansgolvet fylls av livemusik med välkända klassiker som varvas med DJ-musik och saxofon-highlights till kvällens sista låt.']
 };
 
 const mobileQuery = window.matchMedia('(max-width: 820px)');
